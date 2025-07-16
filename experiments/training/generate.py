@@ -9,7 +9,7 @@ from lm_steer.models.get_model import get_model
 def generate(prompt_data, steer_values, tokenizer, model,
              prompt_num, prompt_length, num_beams, num_beam_groups,
              do_sample, temperature, top_p, device):
-    for _prompt in tqdm(prompt_data):
+    for _prompt in tqdm(prompt_data[:100]):
         _prompt["generations"] = []
         prompt_text = _prompt["prompt"]["text"]
         token_length = tokenizer(prompt_text,
