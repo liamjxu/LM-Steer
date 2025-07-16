@@ -2,7 +2,7 @@ TRIAL=sentiment-gpt2-large
 mkdir -p logs/$TRIAL
 
 source=neutral
-control=-5
+control=5
 # PYTHONPATH=. python experiments/training/train.py \
 #     --dataset_name sentiment-sst5 \
 #     --ckpt_name logs/$TRIAL/checkpoint.pt \
